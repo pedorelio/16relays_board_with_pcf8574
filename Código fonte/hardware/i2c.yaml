@@ -1,0 +1,5 @@
+- id: bus_a
+  sda: GPIO4         # D2 - padrão
+  scl: GPIO5        # D1 - padrão, funciona perfeitamente
+  frequency: 100kHz
+  scan: true

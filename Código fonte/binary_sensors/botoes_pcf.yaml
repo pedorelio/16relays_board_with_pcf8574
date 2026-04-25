@@ -1,0 +1,231 @@
+# # ==========================================
+# # INTERRUPTORES FÍSICOS NO PCF #1 (Relés 1-8)
+# # ==========================================
+
+- platform: gpio
+  name: "Interruptor 1"
+  id: interruptor1
+  pin:
+    pcf8574: pcf8574_1
+    number: 0
+    mode: INPUT
+    inverted: true
+  filters:
+    - delayed_on_off: 100ms
+  on_state:
+    then:
+      - switch.toggle: rele1
+
+- platform: gpio
+  name: "Interruptor 2"
+  id: interruptor2
+  pin:
+    pcf8574: pcf8574_1
+    number: 1
+    mode: INPUT
+    inverted: true
+  filters:
+    - delayed_on_off: 100ms
+  on_state:
+    then:
+      - switch.toggle: rele2
+
+- platform: gpio
+  name: "Interruptor 3"
+  id: interruptor3
+  pin:
+    pcf8574: pcf8574_1
+    number: 2
+    mode: INPUT
+    inverted: true
+  filters:
+    - delayed_on_off: 100ms
+  on_state:
+    then:
+      - switch.toggle: rele3
+
+- platform: gpio
+  name: "Interruptor 4"
+  id: interruptor4
+  pin:
+    pcf8574: pcf8574_1
+    number: 3
+    mode: INPUT
+    inverted: true
+  filters:
+    - delayed_on_off: 100ms
+  on_state:
+    then:
+      - switch.toggle: rele4
+
+- platform: gpio
+  name: "Interruptor 5"
+  id: interruptor5
+  pin:
+    pcf8574: pcf8574_1
+    number: 4
+    mode: INPUT
+    inverted: true
+  filters:
+    - delayed_on_off: 100ms
+  on_state:
+    then:
+      - switch.toggle: rele5
+
+- platform: gpio
+  name: "Interruptor 6"
+  id: interruptor6
+  pin:
+    pcf8574: pcf8574_1
+    number: 5
+    mode: INPUT
+    inverted: true
+  filters:
+    - delayed_on_off: 100ms
+  on_state:
+    then:
+      - switch.toggle: rele6
+
+- platform: gpio
+  name: "Interruptor 7"
+  id: interruptor7
+  pin:
+    pcf8574: pcf8574_1
+    number: 6
+    mode: INPUT
+    inverted: true
+  filters:
+    - delayed_on_off: 100ms
+  on_state:
+    then:
+      - switch.toggle: rele7
+
+- platform: gpio
+  name: "Interruptor 8"
+  id: interruptor8
+  pin:
+    pcf8574: pcf8574_1
+    number: 7
+    mode: INPUT
+    inverted: true
+  filters:
+    - delayed_on_off: 100ms
+  on_state:
+    then:
+      - switch.toggle: rele8
+
+# ==========================================
+# INTERRUPTORES FÍSICOS NO PCF #2 (Relés 9-16)
+# ==========================================
+
+- platform: gpio
+  name: "Interruptor 9"
+  id: interruptor9
+  pin:
+    pcf8574: pcf8574_2
+    number: 0
+    mode: INPUT
+    inverted: true
+  filters:
+    - delayed_on_off: 100ms
+  on_state:
+    then:
+      - switch.toggle: rele9
+
+- platform: gpio
+  name: "Interruptor 10"
+  id: interruptor10
+  pin:
+    pcf8574: pcf8574_2
+    number: 1
+    mode: INPUT
+    inverted: true
+  filters:
+    - delayed_on_off: 100ms
+  on_state:
+    then:
+      - switch.toggle: rele10
+
+- platform: gpio
+  name: "Interruptor 11"
+  id: interruptor11
+  pin:
+    pcf8574: pcf8574_2
+    number: 2
+    mode: INPUT
+    inverted: true
+  filters:
+    - delayed_on_off: 100ms
+  on_state:
+    then:
+      - switch.toggle: rele11
+
+- platform: gpio
+  name: "Interruptor 12"
+  id: interruptor12
+  pin:
+    pcf8574: pcf8574_2
+    number: 3
+    mode: INPUT
+    inverted: true
+  filters:
+    - delayed_on_off: 100ms
+  on_state:
+    then:
+      - switch.toggle: rele12
+
+- platform: gpio
+  name: "Interruptor 13"
+  id: interruptor13
+  pin:
+    pcf8574: pcf8574_2
+    number: 4
+    mode: INPUT
+    inverted: true
+  filters:
+    - delayed_on_off: 100ms
+  on_state:
+    then:
+      - switch.toggle: rele13
+
+- platform: gpio
+  name: "Interruptor 14"
+  id: interruptor14
+  pin:
+    pcf8574: pcf8574_2
+    number: 5
+    mode: INPUT
+    inverted: true
+  filters:
+    - delayed_on_off: 100ms
+  on_state:
+    then:
+      - switch.toggle: rele14
+
+- platform: gpio
+  name: "Interruptor 15"
+  id: interruptor15
+  pin:
+    pcf8574: pcf8574_2
+    number: 6
+    mode: INPUT
+    inverted: true
+  filters:
+    - delayed_on_off: 100ms
+  on_state:
+    then:
+      - switch.toggle: rele15
+
+- platform: gpio
+  name: "Interruptor 16"
+  id: interruptor16
+  pin:
+    pcf8574: pcf8574_2
+    number: 7
+    mode: INPUT
+    inverted: true
+  filters:
+    - delayed_on_off: 100ms
+  on_state:
+    then:
+      - switch.toggle: rele16

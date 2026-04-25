@@ -1,0 +1,359 @@
+# ==========================================
+# RELÉS FÍSICOS (via 74HC595)
+# ==========================================
+
+- platform: gpio
+  name: "Relé 1"
+  id: rele1
+  pin:
+    sn74hc595: sn74hc595_hub
+    number: 0
+  on_turn_on:
+    then:
+      - switch.turn_on: virtual_pcf1_0
+  on_turn_off:
+    then:
+      - switch.turn_off: virtual_pcf1_0
+
+- platform: gpio
+  name: "Relé 2"
+  id: rele2
+  pin:
+    sn74hc595: sn74hc595_hub
+    number: 1
+  on_turn_on:
+    then:
+      - switch.turn_on: virtual_pcf1_1
+  on_turn_off:
+    then:
+      - switch.turn_off: virtual_pcf1_1
+
+- platform: gpio
+  name: "Relé 3"
+  id: rele3
+  pin:
+    sn74hc595: sn74hc595_hub
+    number: 2
+  on_turn_on:
+    then:
+      - switch.turn_on: virtual_pcf1_2
+  on_turn_off:
+    then:
+      - switch.turn_off: virtual_pcf1_2
+
+- platform: gpio
+  name: "Relé 4"
+  id: rele4
+  pin:
+    sn74hc595: sn74hc595_hub
+    number: 3
+  on_turn_on:
+    then:
+      - switch.turn_on: virtual_pcf1_3
+  on_turn_off:
+    then:
+      - switch.turn_off: virtual_pcf1_3
+
+- platform: gpio
+  name: "Relé 5"
+  id: rele5
+  pin:
+    sn74hc595: sn74hc595_hub
+    number: 4
+  on_turn_on:
+    then:
+      - switch.turn_on: virtual_pcf1_4
+  on_turn_off:
+    then:
+      - switch.turn_off: virtual_pcf1_4
+
+- platform: gpio
+  name: "Relé 6"
+  id: rele6
+  pin:
+    sn74hc595: sn74hc595_hub
+    number: 5
+  on_turn_on:
+    then:
+      - switch.turn_on: virtual_pcf1_5
+  on_turn_off:
+    then:
+      - switch.turn_off: virtual_pcf1_5
+
+- platform: gpio
+  name: "Relé 7"
+  id: rele7
+  pin:
+    sn74hc595: sn74hc595_hub
+    number: 6
+  on_turn_on:
+    then:
+      - switch.turn_on: virtual_pcf1_6
+  on_turn_off:
+    then:
+      - switch.turn_off: virtual_pcf1_6
+
+- platform: gpio
+  name: "Relé 8"
+  id: rele8
+  pin:
+    sn74hc595: sn74hc595_hub
+    number: 7
+  on_turn_on:
+    then:
+      - switch.turn_on: virtual_pcf1_7
+  on_turn_off:
+    then:
+      - switch.turn_off: virtual_pcf1_7
+
+- platform: gpio
+  name: "Relé 9"
+  id: rele9
+  pin:
+    sn74hc595: sn74hc595_hub
+    number: 8
+  on_turn_on:
+    then:
+      - switch.turn_on: virtual_pcf2_0
+  on_turn_off:
+    then:
+      - switch.turn_off: virtual_pcf2_0
+
+- platform: gpio
+  name: "Relé 10"
+  id: rele10
+  pin:
+    sn74hc595: sn74hc595_hub
+    number: 9
+  on_turn_on:
+    then:
+      - switch.turn_on: virtual_pcf2_1
+  on_turn_off:
+    then:
+      - switch.turn_off: virtual_pcf2_1
+
+- platform: gpio
+  name: "Relé 11"
+  id: rele11
+  pin:
+    sn74hc595: sn74hc595_hub
+    number: 10
+  on_turn_on:
+    then:
+      - switch.turn_on: virtual_pcf2_2
+  on_turn_off:
+    then:
+      - switch.turn_off: virtual_pcf2_2
+
+- platform: gpio
+  name: "Relé 12"
+  id: rele12
+  pin:
+    sn74hc595: sn74hc595_hub
+    number: 11
+  on_turn_on:
+    then:
+      - switch.turn_on: virtual_pcf2_3
+  on_turn_off:
+    then:
+      - switch.turn_off: virtual_pcf2_3
+
+- platform: gpio
+  name: "Relé 13"
+  id: rele13
+  pin:
+    sn74hc595: sn74hc595_hub
+    number: 12
+  on_turn_on:
+    then:
+      - switch.turn_on: virtual_pcf2_4
+  on_turn_off:
+    then:
+      - switch.turn_off: virtual_pcf2_4
+
+- platform: gpio
+  name: "Relé 14"
+  id: rele14
+  pin:
+    sn74hc595: sn74hc595_hub
+    number: 13
+  on_turn_on:
+    then:
+      - switch.turn_on: virtual_pcf2_5
+  on_turn_off:
+    then:
+      - switch.turn_off: virtual_pcf2_5
+
+- platform: gpio
+  name: "Relé 15"
+  id: rele15
+  pin:
+    sn74hc595: sn74hc595_hub
+    number: 14
+  on_turn_on:
+    then:
+      - switch.turn_on: virtual_pcf2_6
+  on_turn_off:
+    then:
+      - switch.turn_off: virtual_pcf2_6
+
+- platform: gpio
+  name: "Relé 16"
+  id: rele16
+  pin:
+    sn74hc595: sn74hc595_hub
+    number: 15
+  on_turn_on:
+    then:
+      - switch.turn_on: virtual_pcf2_7
+  on_turn_off:
+    then:
+      - switch.turn_off: virtual_pcf2_7
+
+# ==========================================
+# SWITCHES VIRTUAIS (PCF - apenas interface)
+# ==========================================
+
+- platform: template
+  name: "Virtual PCF #1 - Pino 0"
+  id: virtual_pcf1_0
+  turn_on_action:
+    - switch.turn_on: rele1
+  turn_off_action:
+    - switch.turn_off: rele1
+  optimistic: true
+
+- platform: template
+  name: "Virtual PCF #1 - Pino 1"
+  id: virtual_pcf1_1
+  turn_on_action:
+    - switch.turn_on: rele2
+  turn_off_action:
+    - switch.turn_off: rele2
+  optimistic: true
+
+- platform: template
+  name: "Virtual PCF #1 - Pino 2"
+  id: virtual_pcf1_2
+  turn_on_action:
+    - switch.turn_on: rele3
+  turn_off_action:
+    - switch.turn_off: rele3
+  optimistic: true
+
+- platform: template
+  name: "Virtual PCF #1 - Pino 3"
+  id: virtual_pcf1_3
+  turn_on_action:
+    - switch.turn_on: rele4
+  turn_off_action:
+    - switch.turn_off: rele4
+  optimistic: true
+
+- platform: template
+  name: "Virtual PCF #1 - Pino 4"
+  id: virtual_pcf1_4
+  turn_on_action:
+    - switch.turn_on: rele5
+  turn_off_action:
+    - switch.turn_off: rele5
+  optimistic: true
+
+- platform: template
+  name: "Virtual PCF #1 - Pino 5"
+  id: virtual_pcf1_5
+  turn_on_action:
+    - switch.turn_on: rele6
+  turn_off_action:
+    - switch.turn_off: rele6
+  optimistic: true
+
+- platform: template
+  name: "Virtual PCF #1 - Pino 6"
+  id: virtual_pcf1_6
+  turn_on_action:
+    - switch.turn_on: rele7
+  turn_off_action:
+    - switch.turn_off: rele7
+  optimistic: true
+
+- platform: template
+  name: "Virtual PCF #1 - Pino 7"
+  id: virtual_pcf1_7
+  turn_on_action:
+    - switch.turn_on: rele8
+  turn_off_action:
+    - switch.turn_off: rele8
+  optimistic: true
+
+- platform: template
+  name: "Virtual PCF #2 - Pino 0"
+  id: virtual_pcf2_0
+  turn_on_action:
+    - switch.turn_on: rele9
+  turn_off_action:
+    - switch.turn_off: rele9
+  optimistic: true
+
+- platform: template
+  name: "Virtual PCF #2 - Pino 1"
+  id: virtual_pcf2_1
+  turn_on_action:
+    - switch.turn_on: rele10
+  turn_off_action:
+    - switch.turn_off: rele10
+  optimistic: true
+
+- platform: template
+  name: "Virtual PCF #2 - Pino 2"
+  id: virtual_pcf2_2
+  turn_on_action:
+     - switch.turn_on: rele11
+  turn_off_action:
+     - switch.turn_off: rele11
+  optimistic: true
+
+- platform: template
+  name: "Virtual PCF #2 - Pino 3"
+  id: virtual_pcf2_3
+  turn_on_action:
+    - switch.turn_on: rele12
+  turn_off_action:
+    - switch.turn_off: rele12
+  optimistic: true
+
+- platform: template
+  name: "Virtual PCF #2 - Pino 4"
+  id: virtual_pcf2_4
+  turn_on_action:
+    - switch.turn_on: rele13
+  turn_off_action:
+    - switch.turn_off: rele13
+  optimistic: true
+
+- platform: template
+  name: "Virtual PCF #2 - Pino 5"
+  id: virtual_pcf2_5
+  turn_on_action:
+    - switch.turn_on: rele14
+  turn_off_action:
+    - switch.turn_off: rele14
+  optimistic: true
+
+- platform: template
+  name: "Virtual PCF #2 - Pino 6"
+  id: virtual_pcf2_6
+  turn_on_action:
+    - switch.turn_on: rele15
+  turn_off_action:
+    - switch.turn_off: rele15
+  optimistic: true
+
+- platform: template
+  name: "Virtual PCF #2 - Pino 7"
+  id: virtual_pcf2_7
+  turn_on_action:
+    - switch.turn_on: rele16
+  turn_off_action:
+    - switch.turn_off: rele16
+  optimistic: true
