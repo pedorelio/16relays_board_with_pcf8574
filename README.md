@@ -36,3 +36,5 @@ Os códigos utilizados estão neste repositório.
 
 A programação foi feita pensando em utilizar interruptores físicos para acionar os relés. Tudo foi feito visando utilização em uma automação residencial com um HUB de automação centralizado.
 
+A pasta "Código Fonte" tem todos os códigos utilizados para compilar o firmware. 
+O arquivo "firmware.bin" já é o firmware compilado pronto para ser utilizado na placa. Este arquivo será sempre a versão mais atualizada que eu fizer do firmware.
