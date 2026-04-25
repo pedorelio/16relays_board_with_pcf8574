@@ -1,6 +1,0 @@
-- id: sn74hc595_hub
-  data_pin: GPIO14   # D7
-  clock_pin: GPIO13  # D5
-  latch_pin: GPIO12  # D6
-  #oe_pin: GPIO3     # D3 (cuidado com boot)
-  sr_count: 2

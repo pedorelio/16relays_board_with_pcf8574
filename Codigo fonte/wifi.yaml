@@ -1,7 +1,0 @@
-ssid: "Carvalho IoT"
-password: "carvalhowebiot"
-min_auth_mode: WPA2
-manual_ip:
-  static_ip: 192.168.0.165
-  gateway: 192.168.0.1
-  subnet: 255.255.255.0
