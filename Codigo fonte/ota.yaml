@@ -1,0 +1,4 @@
+ota:
+  - platform: esphome
+  - password: senha
+  - platform: web_server
